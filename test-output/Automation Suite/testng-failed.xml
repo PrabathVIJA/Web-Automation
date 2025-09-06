@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automation Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="5" name="Tests(failed)">
+    <classes>
+      <class name="org.automation.CartDetailsTestCase">
+        <methods>
+          <include name="CartDetails"/>
+          <include name="quitDriver"/>
+          <include name="startDriver"/>
+        </methods>
+      </class> <!-- org.automation.CartDetailsTestCase -->
+      <class name="org.automation.OrderPageTestCase">
+        <methods>
+          <include name="validateSuccessMessage"/>
+          <include name="quitDriver"/>
+          <include name="startDriver"/>
+        </methods>
+      </class> <!-- org.automation.OrderPageTestCase -->
+      <class name="org.automation.CheckOutTestCase">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="startDriver"/>
+          <include name="checkingOutTestCase"/>
+        </methods>
+      </class> <!-- org.automation.CheckOutTestCase -->
+      <class name="org.automation.CategoryDropDownTestCase">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="startDriver"/>
+          <include name="selectMensClothingandAddingToCartTestCase"/>
+        </methods>
+      </class> <!-- org.automation.CategoryDropDownTestCase -->
+    </classes>
+  </test> <!-- Tests(failed) -->
+</suite> <!-- Failed suite [Automation Suite] -->
