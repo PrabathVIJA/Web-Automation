@@ -20,6 +20,10 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//li[@id=\"menu-item-1228\"]//a[text()=\"Men\"]")
 	WebElement menMenuLink;
 	
+	
+	@FindBy(xpath="//div[@id=\"ast-desktop-header\"]//a[text()='Account']")
+	WebElement AccountLink;
+	
 	public void load()
 	{
 		loading();
@@ -29,6 +33,11 @@ public class HomePage extends BasePage {
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(storeMenuLink)).click();
 		return new StorePage(driver);
+	}
+	
+	public void clickAccountLink()
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(AccountLink)).click();
 	}
 
 }

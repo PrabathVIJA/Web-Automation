@@ -21,8 +21,8 @@ public class CategoryDropDownTestCase extends BaseTest {
 	public void sliderTestCase() throws InterruptedException {
 		HomePage home = new HomePage(driver);
 		home.load();
-		home.clickStorePageLink();
-		StorePage store = new StorePage(driver);
+		
+		StorePage store =home.clickStorePageLink();
 		store.sliderAutomation();
 		Thread.sleep(5000);
 	}

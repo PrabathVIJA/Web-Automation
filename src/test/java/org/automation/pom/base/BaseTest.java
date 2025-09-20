@@ -91,4 +91,13 @@ public class BaseTest {
 		checkOut.clickPlaceOrderBtn();
 		
 	}
+	
+	protected void goToAccountPage()
+	{
+		HomePage home = new HomePage(driver);
+		home.load();
+		home.clickAccountLink();
+	}
+	
+	
 }

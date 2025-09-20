@@ -1,10 +1,18 @@
-{
-	
-	"firstName": "michael",
-	"lastName":"jackson",
-    "adressLineOne":"fhhfhhfhf",
-    "town":"San Francisco",
-	"postalCode":"94107",
-	"email":"jg@gmail.com"
-
-}
+[
+  {
+    "firstName": "michael",
+    "lastName": "jackson",
+    "adressLineOne": "fhhfhhfhf",
+    "town": "San Francisco",
+    "postalCode": "94107",
+    "email": "jg@gmail.com"
+  },
+  {
+    "firstName": "Prabath",
+    "lastName": "Kiran",
+    "adressLineOne": "Vijayawada",
+    "town": "San Diego",
+    "postalCode": "91911",
+    "email": "PK@gmail.com"
+  }
+]

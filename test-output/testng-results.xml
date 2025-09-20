@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-05T17:09:16 IST" name="Default suite" finished-at="2025-09-05T17:09:43 IST" duration-ms="26901">
+  <suite started-at="2025-09-20T15:42:33 IST" name="Default suite" finished-at="2025-09-20T15:42:49 IST" duration-ms="16635">
     <groups>
     </groups>
-    <test started-at="2025-09-05T17:09:16 IST" name="Default test" finished-at="2025-09-05T17:09:43 IST" duration-ms="26901">
-      <class name="org.automation.CheckOutTestCase">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@1949309d]" started-at="2025-09-05T17:09:16 IST" name="startDriver" finished-at="2025-09-05T17:09:20 IST" duration-ms="3689" status="PASS">
+    <test started-at="2025-09-20T15:42:33 IST" name="Default test" finished-at="2025-09-20T15:42:49 IST" duration-ms="16635">
+      <class name="org.automation.LoginRegisterTestCases">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-20T15:42:33 IST" name="startDriver" finished-at="2025-09-20T15:42:37 IST" duration-ms="3743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method signature="checkingOutTestCase()[pri:0, instance:org.automation.CheckOutTestCase@1949309d]" started-at="2025-09-05T17:09:20 IST" name="checkingOutTestCase" finished-at="2025-09-05T17:09:42 IST" duration-ms="22623" status="PASS">
+        <test-method signature="loginWithValidCredentials()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-20T15:42:37 IST" name="loginWithValidCredentials" finished-at="2025-09-20T15:42:49 IST" duration-ms="11743" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkingOutTestCase -->
-        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@1949309d]" started-at="2025-09-05T17:09:42 IST" name="quitDriver" finished-at="2025-09-05T17:09:43 IST" duration-ms="358" status="PASS">
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-20T15:42:49 IST" name="quitDriver" finished-at="2025-09-20T15:42:49 IST" duration-ms="698" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkingOutTestCase status=SUCCESS method=CheckOutTestCase.checkingOutTestCase()[pri:0, instance:org.automation.CheckOutTestCase@1949309d] output={null}]]]>
+                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=LoginRegisterTestCases.loginWithValidCredentials()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-      </class> <!-- org.automation.CheckOutTestCase -->
+      </class> <!-- org.automation.LoginRegisterTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

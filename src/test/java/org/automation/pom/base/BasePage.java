@@ -3,6 +3,7 @@ package org.automation.pom.base;
 import java.time.Duration;
 import java.util.List;
 
+import org.automation.pom.utils.ConfigLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +21,7 @@ public class BasePage {
 	}
 
 	public void loading() {
-		driver.get("https://askomdch.com/");
+		driver.get(ConfigLoader.getInstance().getBaseUrl());
 	}
 
 	public void waitForOverlaysToDisappear(By overLay) {

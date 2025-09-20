@@ -1,11 +1,17 @@
 package org.automation.pom.pages;
 
+import java.time.Duration;
+import java.util.List;
+
 import org.automation.pom.base.BasePage;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckOutPage extends BasePage {
 
@@ -16,6 +22,8 @@ public class CheckOutPage extends BasePage {
 
 	@FindBy(id = "billing_first_name")
 	WebElement firstNameField;
+	//
+	By firstNameFieldInput = By.id("billing_first_name");
 
 	@FindBy(id = "billing_last_name")
 	WebElement lastNameField;
@@ -35,9 +43,22 @@ public class CheckOutPage extends BasePage {
 	@FindBy(id = "place_order")
 	WebElement placeOrderBtn;
 
+	@FindBy(xpath = "//a[text()='Click here to login']")
+	WebElement clickToLoginBtn;
+
+	@FindBy(id = "username")
+	WebElement userNameField;
+
+	@FindBy(id = "password")
+	WebElement passwordField;
+
+	@FindBy(css = "button[class='woocommerce-button button woocommerce-form-login__submit']")
+	WebElement loginBtn;
+
 	public void enterFirstName(String firstName) {
-		wait.until(ExpectedConditions.elementToBeClickable(firstNameField)).clear();
-		wait.until(ExpectedConditions.elementToBeClickable(firstNameField)).sendKeys(firstName);
+	WebElement firstNameInputField =	wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameFieldInput));
+	firstNameInputField.clear();
+	firstNameInputField.sendKeys(firstName);
 	}
 
 	public void enterLasttName(String lastName) {
@@ -68,5 +89,33 @@ public class CheckOutPage extends BasePage {
 	public void clickPlaceOrderBtn() {
 		wait.until(ExpectedConditions.elementToBeClickable(placeOrderBtn)).click();
 	}
+
+	// method to login
+	public void loginWithCredentials(String user, String password) {
+		wait.until(ExpectedConditions.elementToBeClickable(clickToLoginBtn)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(userNameField)).sendKeys(user);
+		wait.until(ExpectedConditions.elementToBeClickable(passwordField)).sendKeys(password);
+		wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
+
+	}
+	
+	public void handleSaveAddressPopup(boolean saveAddress) {
+	    try {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+	        List<WebElement> popupList = driver.findElements(By.id("save-address-popup")); // returns empty list if not found
+
+	        if (!popupList.isEmpty()) { // popup exists
+	            if (saveAddress) {
+	                driver.findElement(By.id("save-address-yes")).click();
+	            } else {
+	                driver.findElement(By.id("save-address-no")).click();
+	            }
+	        }
+	    } catch (Exception e) {
+	        // popup didn’t appear, continue test
+	        System.out.println("Save Address popup not displayed, continuing test...");
+	    }
+	}
+
 
 }

@@ -3,6 +3,7 @@ package org.automation;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.automation.pom.base.BaseTest;
 import org.automation.pom.objects.BillingData;
@@ -16,7 +17,8 @@ public class OrderPageTestCase extends BaseTest{
 	@Test
 	public void validateSuccessMessage() throws IOException
 	{
-		BillingData billingData = JacksonUtility.deserializeJson("billingAddress.json", BillingData.class);
+		List<BillingData> billingDataList = JacksonUtility.deserializeJsonList("billingAddress.json", BillingData.class);
+		BillingData billingData = billingDataList.get(0); 
 		userSelectionData userSelection = JacksonUtility.deserializeJson("usersChoice.json", userSelectionData.class);
 		addMensClothingToCart(userSelection.getColor());
 		viewCart();
