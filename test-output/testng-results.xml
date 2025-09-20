@@ -2,24 +2,24 @@
 <testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-20T15:42:33 IST" name="Default suite" finished-at="2025-09-20T15:42:49 IST" duration-ms="16635">
+  <suite started-at="2025-09-20T15:54:34 IST" name="Default suite" finished-at="2025-09-20T15:54:46 IST" duration-ms="12037">
     <groups>
     </groups>
-    <test started-at="2025-09-20T15:42:33 IST" name="Default test" finished-at="2025-09-20T15:42:49 IST" duration-ms="16635">
+    <test started-at="2025-09-20T15:54:34 IST" name="Default test" finished-at="2025-09-20T15:54:46 IST" duration-ms="12037">
       <class name="org.automation.LoginRegisterTestCases">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-20T15:42:33 IST" name="startDriver" finished-at="2025-09-20T15:42:37 IST" duration-ms="3743" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.LoginRegisterTestCases@48c3205a]" started-at="2025-09-20T15:54:34 IST" name="startDriver" finished-at="2025-09-20T15:54:39 IST" duration-ms="4412" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method signature="loginWithValidCredentials()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-20T15:42:37 IST" name="loginWithValidCredentials" finished-at="2025-09-20T15:42:49 IST" duration-ms="11743" status="PASS">
+        <test-method signature="validate_AccountPage_Landing()[pri:0, instance:org.automation.LoginRegisterTestCases@48c3205a]" started-at="2025-09-20T15:54:39 IST" name="validate_AccountPage_Landing" finished-at="2025-09-20T15:54:46 IST" duration-ms="6754" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithValidCredentials -->
-        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-20T15:42:49 IST" name="quitDriver" finished-at="2025-09-20T15:42:49 IST" duration-ms="698" status="PASS">
+        </test-method> <!-- validate_AccountPage_Landing -->
+        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.LoginRegisterTestCases@48c3205a]" started-at="2025-09-20T15:54:46 IST" name="quitDriver" finished-at="2025-09-20T15:54:46 IST" duration-ms="247" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=LoginRegisterTestCases.loginWithValidCredentials()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69] output={null}]]]>
+                <![CDATA[[TestResult name=validate_AccountPage_Landing status=SUCCESS method=LoginRegisterTestCases.validate_AccountPage_Landing()[pri:0, instance:org.automation.LoginRegisterTestCases@48c3205a] output={null}]]]>
               </value>
             </param>
           </params>
