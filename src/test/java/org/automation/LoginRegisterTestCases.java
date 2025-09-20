@@ -17,7 +17,7 @@ public class LoginRegisterTestCases extends BaseTest {
 		goToAccountPage();
 		loginRegister = new LoginRegisterPage(driver);
 
-		Assert.assertEquals(loginRegister.accountHeaderText(), "Account");
+		Assert.assertEquals(loginRegister.accountHeaderText(), "Accoun");
 	}
 
 	@Test
