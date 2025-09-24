@@ -7,10 +7,11 @@
     </listeners>
 
     <test name="MyTests">
-        <classes>
-            <class name="org.automation.LoginRegisterTestCases"/>
-            
-        </classes>
+     <packages>
+            <package name="org.automation">
+                <exclude name="org.automation.LoginRegisterTestCases"/>
+            </package>
+        </packages>
     </test>
 
 </suite>

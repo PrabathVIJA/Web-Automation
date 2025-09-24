@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class CheckOutTestCase extends BaseTest {
 	CheckOutPage checkOut;
 
-	@Test(dataProvider = "billingData", dataProviderClass = BillingDataProvider.class)
+	@Test(dataProvider = "billingData", dataProviderClass = BillingDataProvider.class,groups = "group2")
 	public void checkingOutTestCase(BillingData billingData) throws InterruptedException, IOException {
 
 		userSelectionData userSelection = JacksonUtility.deserializeJson("usersChoice.json", userSelectionData.class);
