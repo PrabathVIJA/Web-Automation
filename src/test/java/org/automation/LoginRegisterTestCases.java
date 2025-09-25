@@ -20,7 +20,6 @@ public class LoginRegisterTestCases extends BaseTest {
 		loginRegister = new LoginRegisterPage(driver);
 
 		Assert.assertEquals(loginRegister.accountHeaderText(), "Account");
-
 	}
 
 	@Test
