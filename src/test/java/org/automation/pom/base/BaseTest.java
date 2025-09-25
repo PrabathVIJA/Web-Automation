@@ -97,5 +97,11 @@ public class BaseTest {
 		home.load();
 		home.clickAccountLink();
 	}
+	
+	protected void goToAboutPage() {
+		HomePage home = new HomePage(driver);
+		home.load();
+		
+	}
 
 }

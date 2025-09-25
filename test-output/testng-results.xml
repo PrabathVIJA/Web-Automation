@@ -1,105 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="10" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-24T17:16:57 IST" name="SmokeSuite" finished-at="2025-09-24T17:16:59 IST" duration-ms="1302">
+  <suite started-at="2025-09-24T18:25:24 IST" name="Default suite" finished-at="2025-09-24T18:26:52 IST" duration-ms="88585">
     <groups>
-      <group name="smoke">
-        <method signature="CheckOutTestCase.checkingOutWithRegistrationTestCase()[pri:0, instance:org.automation.CheckOutTestCase@1f38957]" name="checkingOutWithRegistrationTestCase" class="org.automation.CheckOutTestCase"/>
-        <method signature="LoginRegisterTestCases.loginWithValidCredentials()[pri:0, instance:org.automation.LoginRegisterTestCases@2c306a57]" name="loginWithValidCredentials" class="org.automation.LoginRegisterTestCases"/>
-      </group> <!-- smoke -->
+      <group name="group2">
+        <method signature="CheckOutTestCase.checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" name="checkingOutTestCase" class="org.automation.CheckOutTestCase"/>
+      </group> <!-- group2 -->
     </groups>
-    <test started-at="2025-09-24T17:16:57 IST" name="SmokeTests" finished-at="2025-09-24T17:16:59 IST" duration-ms="1302">
-      <class name="org.automation.LoginRegisterTestCases">
-        <test-method signature="loginWithValidCredentials()[pri:0, instance:org.automation.LoginRegisterTestCases@2c306a57]" started-at="2025-09-24T17:16:57 IST" name="loginWithValidCredentials" finished-at="2025-09-24T17:16:58 IST" duration-ms="208" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
-at org.automation.pom.base.BasePage.loading(BasePage.java:24)
-at org.automation.pom.pages.HomePage.load(HomePage.java:29)
-at org.automation.pom.base.BaseTest.goToAccountPage(BaseTest.java:97)
-at org.automation.LoginRegisterTestCases.loginWithValidCredentials(LoginRegisterTestCases.java:81)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+    <test started-at="2025-09-24T18:25:24 IST" name="Default test" finished-at="2025-09-24T18:26:52 IST" duration-ms="88585">
+      <class name="org.automation.CheckOutTestCase">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:26 IST" name="startDriver" finished-at="2025-09-24T18:25:32 IST" duration-ms="5412" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithValidCredentials -->
-      </class> <!-- org.automation.LoginRegisterTestCases -->
-      <class name="org.automation.CheckOutTestCase">
-        <test-method signature="checkingOutWithRegistrationTestCase()[pri:0, instance:org.automation.CheckOutTestCase@1f38957]" started-at="2025-09-24T17:16:58 IST" name="checkingOutWithRegistrationTestCase" finished-at="2025-09-24T17:16:59 IST" duration-ms="793" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
-at org.automation.pom.base.BasePage.loading(BasePage.java:24)
-at org.automation.pom.pages.HomePage.load(HomePage.java:29)
-at org.automation.pom.base.BaseTest.addMensClothingToCart(BaseTest.java:64)
-at org.automation.CheckOutTestCase.checkingOutWithRegistrationTestCase(CheckOutTestCase.java:41)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- startDriver -->
+        <test-method signature="checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:32 IST" name="checkingOutTestCase" data-provider="billingData" finished-at="2025-09-24T18:25:55 IST" duration-ms="22902" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.automation.pom.objects.BillingData@102af1bb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkingOutTestCase -->
+        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:55 IST" name="quitDriver" finished-at="2025-09-24T18:25:56 IST" duration-ms="822" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkingOutTestCase status=SUCCESS method=CheckOutTestCase.checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:56 IST" name="startDriver" finished-at="2025-09-24T18:25:58 IST" duration-ms="2001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method signature="checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:58 IST" name="checkingOutTestCase" data-provider="billingData" finished-at="2025-09-24T18:26:17 IST" duration-ms="19461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.automation.pom.objects.BillingData@3f2ae973]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkingOutTestCase -->
+        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:26:17 IST" name="quitDriver" finished-at="2025-09-24T18:26:19 IST" duration-ms="1368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkingOutTestCase status=SUCCESS method=CheckOutTestCase.checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:26:19 IST" name="startDriver" finished-at="2025-09-24T18:26:20 IST" duration-ms="1404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method signature="checkingOutWithRegistrationTestCase()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:26:20 IST" name="checkingOutWithRegistrationTestCase" finished-at="2025-09-24T18:26:50 IST" duration-ms="29855" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkingOutWithRegistrationTestCase -->
+        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:26:50 IST" name="quitDriver" finished-at="2025-09-24T18:26:52 IST" duration-ms="1947" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkingOutWithRegistrationTestCase status=SUCCESS method=CheckOutTestCase.checkingOutWithRegistrationTestCase()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
       </class> <!-- org.automation.CheckOutTestCase -->
-    </test> <!-- SmokeTests -->
-  </suite> <!-- SmokeSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

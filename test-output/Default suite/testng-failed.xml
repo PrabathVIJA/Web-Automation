@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.automation.LoginRegisterTestCases">
+      <class name="org.automation.AboutUsTestCase">
         <methods>
           <include name="quitDriver"/>
           <include name="startDriver"/>
-          <include name="loginBtn_BackGroundColor_validation"/>
+          <include name="openAboutPageInNewTab"/>
         </methods>
-      </class> <!-- org.automation.LoginRegisterTestCases -->
+      </class> <!-- org.automation.AboutUsTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

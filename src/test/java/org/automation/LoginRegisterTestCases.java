@@ -96,4 +96,6 @@ public class LoginRegisterTestCases extends BaseTest {
 
 		Assert.assertEquals(loginRegister.loginBtn_BackGround_Color("background-color"), "rgba(49, 151, 214, 1)");
 	}
+	
+	
 }

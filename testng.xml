@@ -9,7 +9,7 @@
     <test name="MyTests">
      <packages>
             <package name="org.automation">
-                <exclude name="org.automation.LoginRegisterTestCases"/>
+                <include name="org.automation.LoginRegisterTestCases"/>
             </package>
         </packages>
     </test>
