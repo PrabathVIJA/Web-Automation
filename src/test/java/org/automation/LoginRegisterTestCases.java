@@ -3,9 +3,11 @@ package org.automation;
 import static org.testng.Assert.assertEquals;
 
 import org.automation.pom.base.BaseTest;
+import org.automation.pom.factory.DriverManager;
 import org.automation.pom.pages.LoginRegisterPage;
 import org.automation.pom.utils.ConfigLoader;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginRegisterTestCases extends BaseTest {
@@ -53,7 +55,7 @@ public class LoginRegisterTestCases extends BaseTest {
 		Assert.assertEquals(enteredValue, "pra");
 	}
 
-	@Test
+	@Test(groups = "group1")
 	public void validate_WronginputEntered_In_PWDField() {
 		goToAccountPage();
 		loginRegister = new LoginRegisterPage(driver);
@@ -83,5 +85,14 @@ public class LoginRegisterTestCases extends BaseTest {
 
 		Assert.assertEquals(loginRegister.greetingMessage(), "Hello kiran (not kiran? Log out)");
 		loginRegister.clickLogOut();
+	}
+
+	// check the background color of login button
+	@Test
+	public void loginBtn_BackGroundColor_validation() {
+		goToAccountPage();
+		loginRegister = new LoginRegisterPage(driver);
+
+		Assert.assertEquals(loginRegister.loginBtn_BackGround_Color("background-color"), "rgba(49, 151, 214, 1)");
 	}
 }

@@ -5,9 +5,9 @@
     <classes>
       <class name="org.automation.LoginRegisterTestCases">
         <methods>
-          <include name="loginWithValidCredentials"/>
           <include name="quitDriver"/>
           <include name="startDriver"/>
+          <include name="loginBtn_BackGroundColor_validation"/>
         </methods>
       </class> <!-- org.automation.LoginRegisterTestCases -->
     </classes>

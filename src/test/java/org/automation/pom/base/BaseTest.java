@@ -26,6 +26,7 @@ public class BaseTest {
 
 	@BeforeMethod
 	public void startDriver() {
+
 		driver = new DriverManager().initializeDriver();
 	}
 
@@ -57,9 +58,8 @@ public class BaseTest {
 
 		driver.quit();
 	}
-	
-	protected void addMensClothingToCart(String gender)
-	{
+
+	protected void addMensClothingToCart(String gender) {
 		HomePage home = new HomePage(driver);
 		home.load();
 		home.clickStorePageLink();
@@ -68,9 +68,8 @@ public class BaseTest {
 		store.addingToCart();
 		store.GoHoverCartIcon();
 	}
-	
-	protected void viewCart()
-	{
+
+	protected void viewCart() {
 		CartDetailsPage cartDetail = new CartDetailsPage(driver);
 		cartDetail.enterQuantity();
 		cartDetail.updateCart();
@@ -78,26 +77,25 @@ public class BaseTest {
 
 		cartDetail.clickProceedToCheckOutBtn();
 	}
-	
-	protected void checkOutDetails(String firstName,String lastName,String address,String town,String postalCode,String emailAddress)
-	{
+
+	protected void checkOutDetails(String firstName, String lastName, String address, String town, String postalCode,
+			String emailAddress) {
 		CheckOutPage checkOut = new CheckOutPage(driver);
 		checkOut.enterFirstName(firstName);
 		checkOut.enterLasttName(lastName);
 		checkOut.enterAddress(address);
 		checkOut.enterTownOrCity(town);
-		checkOut.enterPostalCode( postalCode);
+		checkOut.enterPostalCode(postalCode);
 		checkOut.enterEmailAdressField(emailAddress);
 		checkOut.clickPlaceOrderBtn();
-		
+
 	}
+
 	
-	protected void goToAccountPage()
-	{
+	protected void goToAccountPage() {
 		HomePage home = new HomePage(driver);
 		home.load();
 		home.clickAccountLink();
 	}
-	
-	
+
 }
