@@ -51,6 +51,6 @@ public class CheckOutTestCase extends BaseTest {
 		checkOut.enterEmailAdressField(billingData.getEmail());
 		checkOut.clickPlaceOrderBtn();
 		checkOut.handleSaveAddressPopup(true);
-		Thread.sleep(2000);
+		
 	}
 }
