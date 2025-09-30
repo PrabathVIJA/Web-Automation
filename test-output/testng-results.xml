@@ -1,87 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-24T18:25:24 IST" name="Default suite" finished-at="2025-09-24T18:26:52 IST" duration-ms="88585">
+  <suite started-at="2025-09-26T17:00:24 IST" name="Default suite" finished-at="2025-09-26T17:00:35 IST" duration-ms="10987">
     <groups>
-      <group name="group2">
-        <method signature="CheckOutTestCase.checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" name="checkingOutTestCase" class="org.automation.CheckOutTestCase"/>
-      </group> <!-- group2 -->
     </groups>
-    <test started-at="2025-09-24T18:25:24 IST" name="Default test" finished-at="2025-09-24T18:26:52 IST" duration-ms="88585">
-      <class name="org.automation.CheckOutTestCase">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:26 IST" name="startDriver" finished-at="2025-09-24T18:25:32 IST" duration-ms="5412" status="PASS">
+    <test started-at="2025-09-26T17:00:24 IST" name="Default test" finished-at="2025-09-26T17:00:35 IST" duration-ms="10987">
+      <class name="org.automation.LoginRegisterTestCases">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-26T17:00:24 IST" name="startDriver" finished-at="2025-09-26T17:00:29 IST" duration-ms="5050" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method signature="checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:32 IST" name="checkingOutTestCase" data-provider="billingData" finished-at="2025-09-24T18:25:55 IST" duration-ms="22902" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.automation.pom.objects.BillingData@102af1bb]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="openAboutPageInNewTabAndSwitchToIt()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-26T17:00:29 IST" name="openAboutPageInNewTabAndSwitchToIt" finished-at="2025-09-26T17:00:34 IST" duration-ms="4740" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkingOutTestCase -->
-        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:55 IST" name="quitDriver" finished-at="2025-09-24T18:25:56 IST" duration-ms="822" status="PASS">
+        </test-method> <!-- openAboutPageInNewTabAndSwitchToIt -->
+        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69]" started-at="2025-09-26T17:00:34 IST" name="quitDriver" finished-at="2025-09-26T17:00:35 IST" duration-ms="517" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkingOutTestCase status=SUCCESS method=CheckOutTestCase.checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69] output={null}]]]>
+                <![CDATA[[TestResult name=openAboutPageInNewTabAndSwitchToIt status=SUCCESS method=LoginRegisterTestCases.openAboutPageInNewTabAndSwitchToIt()[pri:0, instance:org.automation.LoginRegisterTestCases@6ed06f69] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:56 IST" name="startDriver" finished-at="2025-09-24T18:25:58 IST" duration-ms="2001" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method signature="checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:25:58 IST" name="checkingOutTestCase" data-provider="billingData" finished-at="2025-09-24T18:26:17 IST" duration-ms="19461" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.automation.pom.objects.BillingData@3f2ae973]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkingOutTestCase -->
-        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:26:17 IST" name="quitDriver" finished-at="2025-09-24T18:26:19 IST" duration-ms="1368" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkingOutTestCase status=SUCCESS method=CheckOutTestCase.checkingOutTestCase(org.automation.pom.objects.BillingData)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:26:19 IST" name="startDriver" finished-at="2025-09-24T18:26:20 IST" duration-ms="1404" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method signature="checkingOutWithRegistrationTestCase()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:26:20 IST" name="checkingOutWithRegistrationTestCase" finished-at="2025-09-24T18:26:50 IST" duration-ms="29855" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkingOutWithRegistrationTestCase -->
-        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@1948ea69]" started-at="2025-09-24T18:26:50 IST" name="quitDriver" finished-at="2025-09-24T18:26:52 IST" duration-ms="1947" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkingOutWithRegistrationTestCase status=SUCCESS method=CheckOutTestCase.checkingOutWithRegistrationTestCase()[pri:0, instance:org.automation.CheckOutTestCase@1948ea69] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- org.automation.CheckOutTestCase -->
+      </class> <!-- org.automation.LoginRegisterTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

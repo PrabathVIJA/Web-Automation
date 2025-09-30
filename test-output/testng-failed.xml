@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.automation.AboutUsTestCase">
+      <class name="org.automation.LoginRegisterTestCases">
         <methods>
           <include name="quitDriver"/>
           <include name="startDriver"/>
-          <include name="openAboutPageInNewTab"/>
+          <include name="openAboutPageInNewTabAndSwitchToIt"/>
         </methods>
-      </class> <!-- org.automation.AboutUsTestCase -->
+      </class> <!-- org.automation.LoginRegisterTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

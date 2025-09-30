@@ -49,7 +49,7 @@ public class HomePage extends BasePage {
 		for (String handle : driver.getWindowHandles()) {
 			driver.switchTo().window(handle);
 		}
-
+ 
 		return driver.getTitle();
 	}
 
