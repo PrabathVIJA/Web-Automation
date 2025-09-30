@@ -30,7 +30,7 @@ public class CheckOutTestCase extends BaseTest {
 		checkOut.enterPostalCode(billingData.getPostalCode());
 		checkOut.enterEmailAdressField(billingData.getEmail());
 		checkOut.clickPlaceOrderBtn();
-		Thread.sleep(2000);
+		
 	}
 
 	@Test
