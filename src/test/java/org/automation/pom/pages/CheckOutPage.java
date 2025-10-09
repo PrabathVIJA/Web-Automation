@@ -12,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class CheckOutPage extends BasePage {
 
@@ -48,6 +49,12 @@ public class CheckOutPage extends BasePage {
 
 	@FindBy(id = "username")
 	WebElement userNameField;
+	
+	@FindBy(css="#payment_method_bacs")
+	WebElement DirectBankTransferRadioBtn;
+	
+	@FindBy(css="#payment_method_cod")
+	WebElement codRadioBtn;
 
 	@FindBy(id = "password")
 	WebElement passwordField;
@@ -97,6 +104,12 @@ public class CheckOutPage extends BasePage {
 		wait.until(ExpectedConditions.elementToBeClickable(passwordField)).sendKeys(password);
 		wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
 
+	}
+	
+	public void verifyIfDirectBankTransferBtnIsChecked()
+	{
+		boolean isSelected = wait.until(ExpectedConditions.elementToBeClickable(DirectBankTransferRadioBtn)).isSelected();
+		Assert.assertTrue(isSelected, "Direct Bank transfer should be checked by default");
 	}
 	
 	public void handleSaveAddressPopup(boolean saveAddress) {

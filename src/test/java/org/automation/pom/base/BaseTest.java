@@ -69,6 +69,15 @@ public class BaseTest {
 		store.GoHoverCartIcon();
 	}
 
+	protected void addAllItemsOnPageToCart() throws InterruptedException {
+		HomePage home = new HomePage(driver);
+		home.load();
+		home.clickStorePageLink();
+		StorePage store = new StorePage(driver);
+        store.addAllItems();
+		
+	}
+
 	protected void viewCart() {
 		CartDetailsPage cartDetail = new CartDetailsPage(driver);
 		cartDetail.enterQuantity();
@@ -91,19 +100,16 @@ public class BaseTest {
 
 	}
 
-	
 	protected void goToAccountPage() {
 		HomePage home = new HomePage(driver);
 		home.load();
 		home.clickAccountLink();
 	}
-	
+
 	protected void goToAboutPage() {
 		HomePage home = new HomePage(driver);
 		home.load();
-		
-	}
-	
 
+	}
 
 }

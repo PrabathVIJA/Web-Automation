@@ -16,36 +16,39 @@ public class LoginRegisterPage extends BasePage {
 	}
 
 	@FindBy(id = "username")
-	WebElement loginUserNameOrEmailField;
+	private WebElement loginUserNameOrEmailField;
 	@FindBy(id = "password")
-	WebElement loginPasswordField;
+	private WebElement loginPasswordField;
 	@FindBy(css = ".woocommerce-button.button.woocommerce-form-login__submit")
-	WebElement loginBtn;
+	private WebElement loginBtn;
 	@FindBy(xpath = "//ul[@class=\"woocommerce-error\"]//li")
-	WebElement userNameReqrdErrorText;
+	private WebElement userNameReqrdErrorText;
 	@FindBy(xpath = "//h1[text()='Account']")
-	WebElement AccountHeaderText;
+	private WebElement AccountHeaderText;
 
 	@FindBy(xpath = "//ul[@class=\"woocommerce-error\"]")
-	WebElement passwordfieldEmptyText;
+	private WebElement passwordfieldEmptyText;
 	@FindBy(css = "p[class=\"woocommerce-LostPassword lost_password\"]>a")
-	WebElement lostYourPWDBtn;
+	private WebElement lostYourPWDBtn;
 	@FindBy(xpath = "//form[@class=\"woocommerce-ResetPassword lost_reset_password\"]/p[contains(text(),\"Lost your password?\")]")
-	WebElement lostYourPasswordTextInPageWhereUserChangesHisPassword;
+	private WebElement lostYourPasswordTextInPageWhereUserChangesHisPassword;
 
 	@FindBy(id = "reg_username")
-	WebElement registerNameField;
+	private WebElement registerNameField;
 	@FindBy(id = "reg_email")
-	WebElement registerEmaildField;
+	private WebElement registerEmaildField;
 	@FindBy(id = "reg_password")
-	WebElement passwordField;
+	private WebElement passwordField;
 	@FindBy(xpath = "//button[text()=\"Register\"]")
-	WebElement registerBtn;
+	private WebElement registerBtn;
 	@FindBy(xpath = "//div[@class=\"woocommerce-MyAccount-content\"]//p[normalize-space(text())=\"Hello\"]")
-	WebElement accountGreeting;
+	private WebElement accountGreeting;
 
 	@FindBy(xpath = "//a[text()='Log out']")
-	WebElement logOutBtn;
+	private WebElement logOutBtn;
+
+	@FindBy(id = "rememberme")
+	private WebElement rememberMeBtn;
 
 	public void enterUsernameOrEmail(String user) {
 		WebElement usernameEmailFld = wait.until(ExpectedConditions.elementToBeClickable(loginUserNameOrEmailField));
@@ -112,5 +115,22 @@ public class LoginRegisterPage extends BasePage {
 		String value = wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).getCssValue(cssValue);
 		return value;
 	}
+
+	public boolean clickRememberBtn() {
+		wait.until(ExpectedConditions.elementToBeClickable(rememberMeBtn));
+		if (!rememberMeBtn.isSelected()) {
+			rememberMeBtn.click();
+		}
+
+		return rememberMeBtn.isSelected();
+	}
+
+	public void loginWithRememberMe(String userName, String pwd) {
+		enterUsernameOrEmail(userName);
+		enterPassword(pwd);
+		clickRememberBtn();
+
+	}
+
 	//
 }

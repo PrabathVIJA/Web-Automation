@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.automation.pom.base.BasePage;
 import org.automation.pom.utils.ActionUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,14 +46,23 @@ public class StorePage extends BasePage {
 	@FindBy(xpath = "//a[@aria-label=\"Add “Dark Grey Jeans” to your cart\"]")
 	WebElement greyJeanAddToCart;
 
+	@FindBy(xpath = "//div[@class=\"ast-woocommerce-container\"]//a[text()=\"Add to cart\"]")
+	List<WebElement> itemsDisplayedOnPageOne;
+
 	@FindBy(xpath = "//div[@class='site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container']//span[@class='count']")
 	WebElement cartIcon;
 
 	@FindBy(xpath = "//div[@class='site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container']//a[@class='button wc-forward'][normalize-space()='View cart']")
 	WebElement viewCart;
 
-	@FindBy(xpath = "//div[@class='site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container']//a[normalize-space()='Checkout']")
+	@FindBy(css = "#ast-desktop-header #ast-site-header-cart .button.checkout.wc-forward")
 	WebElement checkOut;
+
+	@FindBy(css = "div#ast-desktop-header .count")
+	WebElement countOfCart;
+
+	@FindBy(css = "a.next ")
+	WebElement nextPageBtn;
 
 	public void enterInProductInputField(String str) {
 		wait.until(ExpectedConditions.elementToBeClickable(searchProductInputField)).sendKeys(str);
@@ -153,9 +163,42 @@ public class StorePage extends BasePage {
 		wait.until(ExpectedConditions.elementToBeClickable(greyJeanAddToCart)).click();
 	}
 
+//hover over cart Icon and clikc view cart
 	public void GoHoverCartIcon() {
 		actionUtil.scrollIntoView(cartIcon);
 		actionUtil.Hover(cartIcon);
 		wait.until(ExpectedConditions.elementToBeClickable(viewCart)).click();
+	}
+
+	// hover over cart Icon and click check out
+	public void clickCheckOut() {
+		actionUtil.scrollIntoView(cartIcon);
+		actionUtil.Hover(cartIcon);
+		wait.until(ExpectedConditions.elementToBeClickable(checkOut)).click();
+	}
+
+	// selects all the visible items on page
+	public void addAllItems() throws InterruptedException {
+		List<WebElement> items = wait.until(ExpectedConditions.visibilityOfAllElements(itemsDisplayedOnPageOne));
+
+		for (WebElement item : items) {
+			item.click();
+			String productId = item.getAttribute("data-product_id");
+			
+			By viewInCart = By.cssSelector("a[data-product_id='" + productId + "'] + a.added_to_cart");
+			wait.until(ExpectedConditions.visibilityOfElementLocated(viewInCart));
+		}
+
+	}
+
+	public int getCountOfCart() {
+		String text = wait.until(ExpectedConditions.elementToBeClickable(countOfCart)).getText().trim();
+		int count = Integer.parseInt(text);
+		return count;
+
+	}
+
+	public void clickNextPage() {
+		wait.until(ExpectedConditions.elementToBeClickable(nextPageBtn)).click();
 	}
 }

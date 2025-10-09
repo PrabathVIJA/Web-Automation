@@ -1,6 +1,7 @@
 package org.automation;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.automation.pom.base.BaseTest;
 import org.automation.pom.factory.DriverManager;
@@ -106,6 +107,18 @@ public class LoginRegisterTest extends BaseTest {
 
 		Assert.assertEquals(loginRegister.loginBtn_BackGround_Color("background-color"), "rgba(49, 151, 214, 1)");
 
+	}
+	
+	@Test
+	public void validateLoginWithCheckingRememberMe()
+	{
+		goToAccountPage();
+		loginRegister = new LoginRegisterPage(driver);
+		loginRegister.loginWithRememberMe(ConfigLoader.getInstance().getUserName(), ConfigLoader.getInstance().getPassword());
+		boolean isChecked = loginRegister.clickRememberBtn();
+		assertTrue(isChecked);
+		loginRegister.loginClick();
+		loginRegister.clickLogOut();
 	}
 
 }
