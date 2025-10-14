@@ -111,5 +111,11 @@ public class BaseTest {
 		home.load();
 
 	}
+	
+	protected void goToStorePage() {
+		HomePage home = new HomePage(driver);
+		home.load();
+		home.clickStorePageLink();
+	}
 
 }

@@ -49,11 +49,11 @@ public class CheckOutPage extends BasePage {
 
 	@FindBy(id = "username")
 	WebElement userNameField;
-	
-	@FindBy(css="#payment_method_bacs")
+
+	@FindBy(css = "#payment_method_bacs")
 	WebElement DirectBankTransferRadioBtn;
-	
-	@FindBy(css="#payment_method_cod")
+
+	@FindBy(css = "#payment_method_cod")
 	WebElement codRadioBtn;
 
 	@FindBy(id = "password")
@@ -62,10 +62,12 @@ public class CheckOutPage extends BasePage {
 	@FindBy(css = "button[class='woocommerce-button button woocommerce-form-login__submit']")
 	WebElement loginBtn;
 
+	
+
 	public void enterFirstName(String firstName) {
-	WebElement firstNameInputField =	wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameFieldInput));
-	firstNameInputField.clear();
-	firstNameInputField.sendKeys(firstName);
+		WebElement firstNameInputField = wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameFieldInput));
+		firstNameInputField.clear();
+		firstNameInputField.sendKeys(firstName);
 	}
 
 	public void enterLasttName(String lastName) {
@@ -95,6 +97,7 @@ public class CheckOutPage extends BasePage {
 
 	public void clickPlaceOrderBtn() {
 		wait.until(ExpectedConditions.elementToBeClickable(placeOrderBtn)).click();
+
 	}
 
 	// method to login
@@ -105,30 +108,31 @@ public class CheckOutPage extends BasePage {
 		wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
 
 	}
-	
-	public void verifyIfDirectBankTransferBtnIsChecked()
-	{
-		boolean isSelected = wait.until(ExpectedConditions.elementToBeClickable(DirectBankTransferRadioBtn)).isSelected();
+
+	public void verifyIfDirectBankTransferBtnIsChecked() {
+		boolean isSelected = wait.until(ExpectedConditions.elementToBeClickable(DirectBankTransferRadioBtn))
+				.isSelected();
 		Assert.assertTrue(isSelected, "Direct Bank transfer should be checked by default");
 	}
-	
-	public void handleSaveAddressPopup(boolean saveAddress) {
-	    try {
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
-	        List<WebElement> popupList = driver.findElements(By.id("save-address-popup")); // returns empty list if not found
 
-	        if (!popupList.isEmpty()) { // popup exists
-	            if (saveAddress) {
-	                driver.findElement(By.id("save-address-yes")).click();
-	            } else {
-	                driver.findElement(By.id("save-address-no")).click();
-	            }
-	        }
-	    } catch (Exception e) {
-	        // popup didn’t appear, continue test
-	        System.out.println("Save Address popup not displayed, continuing test...");
-	    }
+	public void handleSaveAddressPopup(boolean saveAddress) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+			List<WebElement> popupList = driver.findElements(By.id("save-address-popup")); // returns empty list if not
+																							// found
+
+			if (!popupList.isEmpty()) { // popup exists
+				if (saveAddress) {
+					driver.findElement(By.id("save-address-yes")).click();
+				} else {
+					driver.findElement(By.id("save-address-no")).click();
+				}
+			}
+		} catch (Exception e) {
+			// popup didn’t appear, continue test
+			System.out.println("Save Address popup not displayed, continuing test...");
+		}
 	}
 
-
+	
 }

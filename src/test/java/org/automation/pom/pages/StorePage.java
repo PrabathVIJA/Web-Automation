@@ -163,6 +163,13 @@ public class StorePage extends BasePage {
 		wait.until(ExpectedConditions.elementToBeClickable(greyJeanAddToCart)).click();
 	}
 
+	//dyanmic method for adding item to cart
+	public void addItemToTheCartUsingDynamicSelector(String productName)
+	{
+	 By addToCart = By.cssSelector(String.format("[aria-label='Add “%s” to your cart']", productName));
+	 
+	 wait.until(ExpectedConditions.elementToBeClickable(addToCart)).click();
+	}
 //hover over cart Icon and clikc view cart
 	public void GoHoverCartIcon() {
 		actionUtil.scrollIntoView(cartIcon);
@@ -185,7 +192,8 @@ public class StorePage extends BasePage {
 			item.click();
 			String productId = item.getAttribute("data-product_id");
 			
-			By viewInCart = By.cssSelector("a[data-product_id='" + productId + "'] + a.added_to_cart");
+//			By viewInCart = By.cssSelector("a[data-product_id='" + productId + "'] + a.added_to_cart");
+			By viewInCart =	By.cssSelector(String.format("a[data-product_id='%s'] + a.added_to_cart", productId));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(viewInCart));
 		}
 

@@ -5,9 +5,9 @@
     <classes>
       <class name="org.automation.CheckOutTestCase">
         <methods>
-          <include name="addAllItemsOnPageOneToCartAndCheckOutTest"/>
           <include name="quitDriver"/>
           <include name="startDriver"/>
+          <include name="addAnyItemToCartWithDynamicSelector"/>
         </methods>
       </class> <!-- org.automation.CheckOutTestCase -->
     </classes>

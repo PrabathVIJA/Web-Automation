@@ -7,18 +7,22 @@ import java.util.List;
 
 import org.automation.pom.base.BaseTest;
 import org.automation.pom.dataProviders.BillingDataProvider;
+import org.automation.pom.dataProviders.ProductDataProvider;
 import org.automation.pom.objects.BillingData;
+import org.automation.pom.objects.Product;
 import org.automation.pom.objects.userSelectionData;
 import org.automation.pom.pages.CheckOutPage;
+import org.automation.pom.pages.OrderDetailsPage;
 import org.automation.pom.pages.StorePage;
 import org.automation.pom.utils.ConfigLoader;
 import org.automation.pom.utils.JacksonUtility;
-
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CheckOutTestCase extends BaseTest {
 	CheckOutPage checkOut;
 	StorePage storePage;
+	OrderDetailsPage orderPage;
 
 	@Test(dataProvider = "billingData", dataProviderClass = BillingDataProvider.class)
 	public void checkingOutTestCase(BillingData billingData) throws InterruptedException, IOException {
@@ -86,5 +90,29 @@ public class CheckOutTestCase extends BaseTest {
 		checkOut.verifyIfDirectBankTransferBtnIsChecked();
 		checkOut.clickPlaceOrderBtn();
 
+	}
+	
+	@Test(dataProvider = "productName", dataProviderClass = ProductDataProvider.class)
+	public void addAnyItemToCartWithDynamicSelector(Product product) throws IOException {
+		goToStorePage();
+		storePage = new StorePage(driver);
+		orderPage = new OrderDetailsPage(driver);
+		
+		storePage.addItemToTheCartUsingDynamicSelector(product.getProductName());
+		storePage.clickCheckOut();
+		List<BillingData> list = JacksonUtility.deserializeJsonList("billingAddress.json", BillingData.class);
+		BillingData billingData = list.get(0);
+		checkOut = new CheckOutPage(driver);
+		checkOut.enterFirstName(billingData.getFirstName());
+		checkOut.enterLasttName(billingData.getLastName());
+		checkOut.enterAddress(billingData.getAdressLineOne());
+		checkOut.enterTownOrCity(billingData.getTown());
+		checkOut.enterPostalCode(billingData.getPostalCode());
+		
+		checkOut.enterEmailAdressField(billingData.getEmail());
+		checkOut.verifyIfDirectBankTransferBtnIsChecked();
+		checkOut.clickPlaceOrderBtn();
+		String expected = orderPage.getSuccessText();
+		Assert.assertEquals("Thank you. Your order has been received.",expected);
 	}
 }

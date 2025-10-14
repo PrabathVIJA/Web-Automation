@@ -1,25 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-09T17:31:02 IST" name="Default suite" finished-at="2025-10-09T17:31:38 IST" duration-ms="35573">
+  <suite started-at="2025-10-14T17:44:31 IST" name="Default suite" finished-at="2025-10-14T17:45:10 IST" duration-ms="39142">
     <groups>
     </groups>
-    <test started-at="2025-10-09T17:31:02 IST" name="Default test" finished-at="2025-10-09T17:31:38 IST" duration-ms="35573">
+    <test started-at="2025-10-14T17:44:31 IST" name="Default test" finished-at="2025-10-14T17:45:10 IST" duration-ms="39142">
       <class name="org.automation.CheckOutTestCase">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@121c54fa]" started-at="2025-10-09T17:31:02 IST" name="startDriver" finished-at="2025-10-09T17:31:07 IST" duration-ms="4804" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@b967222]" started-at="2025-10-14T17:44:32 IST" name="startDriver" finished-at="2025-10-14T17:44:37 IST" duration-ms="4268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method signature="addAllItemsOnPageOneToCartAndCheckOutTest()[pri:0, instance:org.automation.CheckOutTestCase@121c54fa]" started-at="2025-10-09T17:31:08 IST" name="addAllItemsOnPageOneToCartAndCheckOutTest" finished-at="2025-10-09T17:31:37 IST" duration-ms="29719" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addAllItemsOnPageOneToCartAndCheckOutTest -->
-        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@121c54fa]" started-at="2025-10-09T17:31:37 IST" name="quitDriver" finished-at="2025-10-09T17:31:38 IST" duration-ms="429" status="PASS">
+        <test-method signature="addAnyItemToCartWithDynamicSelector(org.automation.pom.objects.Product)[pri:0, instance:org.automation.CheckOutTestCase@b967222]" started-at="2025-10-14T17:44:37 IST" name="addAnyItemToCartWithDynamicSelector" data-provider="productName" finished-at="2025-10-14T17:44:52 IST" duration-ms="15149" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addAllItemsOnPageOneToCartAndCheckOutTest status=SUCCESS method=CheckOutTestCase.addAllItemsOnPageOneToCartAndCheckOutTest()[pri:0, instance:org.automation.CheckOutTestCase@121c54fa] output={null}]]]>
+                <![CDATA[org.automation.pom.objects.Product@359865a2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAnyItemToCartWithDynamicSelector -->
+        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@b967222]" started-at="2025-10-14T17:44:52 IST" name="quitDriver" finished-at="2025-10-14T17:44:52 IST" duration-ms="386" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addAnyItemToCartWithDynamicSelector status=SUCCESS method=CheckOutTestCase.addAnyItemToCartWithDynamicSelector(org.automation.pom.objects.Product)[pri:0, instance:org.automation.CheckOutTestCase@b967222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:org.automation.CheckOutTestCase@b967222]" started-at="2025-10-14T17:44:52 IST" name="startDriver" finished-at="2025-10-14T17:44:54 IST" duration-ms="2059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method signature="addAnyItemToCartWithDynamicSelector(org.automation.pom.objects.Product)[pri:0, instance:org.automation.CheckOutTestCase@b967222]" started-at="2025-10-14T17:44:54 IST" name="addAnyItemToCartWithDynamicSelector" data-provider="productName" finished-at="2025-10-14T17:45:10 IST" duration-ms="15152" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.automation.pom.objects.Product@3063be68]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAnyItemToCartWithDynamicSelector -->
+        <test-method is-config="true" signature="quitDriver(org.testng.ITestResult)[pri:0, instance:org.automation.CheckOutTestCase@b967222]" started-at="2025-10-14T17:45:10 IST" name="quitDriver" finished-at="2025-10-14T17:45:10 IST" duration-ms="328" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addAnyItemToCartWithDynamicSelector status=SUCCESS method=CheckOutTestCase.addAnyItemToCartWithDynamicSelector(org.automation.pom.objects.Product)[pri:0, instance:org.automation.CheckOutTestCase@b967222] output={null}]]]>
               </value>
             </param>
           </params>
