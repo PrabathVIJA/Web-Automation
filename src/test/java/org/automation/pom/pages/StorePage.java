@@ -2,6 +2,7 @@ package org.automation.pom.pages;
 
 import java.util.List;
 
+
 import org.automation.pom.base.BasePage;
 import org.automation.pom.utils.ActionUtils;
 import org.openqa.selenium.By;
@@ -13,6 +14,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.TimeoutException;
+
 
 public class StorePage extends BasePage {
 	private ActionUtils actionUtil;
@@ -169,8 +172,8 @@ public class StorePage extends BasePage {
 			By addToCart = By.cssSelector(String.format("[aria-label='Add “%s” to your cart']", productName));
 			System.out.println("Adding " + productName + " to" + " Cart");
 			wait.until(ExpectedConditions.elementToBeClickable(addToCart)).click();
-		} catch (Exception e) {
-			e.printStackTrace(); // prints exception type, message, and exact line numbers
+		} catch (TimeoutException e) {
+			System.out.println("Can't click on " + productName);// prints exception type, message, and exact line numbers
 		}
 
 	}
