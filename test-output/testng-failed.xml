@@ -7,7 +7,7 @@
         <methods>
           <include name="quitDriver"/>
           <include name="startDriver"/>
-          <include name="addAnyItemToCartWithDynamicSelector"/>
+          <include name="addAnyItemToCartWithDynamicSelector" invocation-numbers="0"/>
         </methods>
       </class> <!-- org.automation.CheckOutTestCase -->
     </classes>
