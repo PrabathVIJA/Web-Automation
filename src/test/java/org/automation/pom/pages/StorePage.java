@@ -217,4 +217,7 @@ public class StorePage extends BasePage {
 	public void clickNextPage() {
 		wait.until(ExpectedConditions.elementToBeClickable(nextPageBtn)).click();
 	}
+	
+	
+	
 }
